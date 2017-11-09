@@ -1,5 +1,4 @@
-# terraformdemo
-Packer + Terraform + AWS + Docker Swarm setup
+# Packer_Terraform_AWS_DOCKER_SWARM SETUP
 
 Here is the basic setup to run docker swarm cluster in AWS using Packer and Terraform. This will setup a swarm cluster with one swarm manager + two swarm workers. The swarm is initiated during provisioning. All other swarm agents (workers) will automatically connect to the manager, Since we don't know the manager join token before the initialisation, we choose to copy it to a file on the swarm manager and do "scp" to the master host from the agent's machines.by a token, generated during the swarm initialisation. 
 
