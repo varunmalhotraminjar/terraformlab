@@ -1,0 +1,153 @@
+1510166363,,ui,say,amazon-ebs output will be in this color.
+1510166363,,ui,say,
+1510166363,,ui,say,==> amazon-ebs: Prevalidating AMI Name...
+1510166365,,ui,say,==> amazon-ebs: Inspecting the source AMI...
+1510166366,,ui,say,==> amazon-ebs: Creating temporary keypair: packer 5a034f5b-b29d-b8ef-c711-234be4abd382
+1510166366,,ui,say,==> amazon-ebs: Creating temporary security group for this instance...
+1510166367,,ui,say,==> amazon-ebs: Authorizing access to port 22 the temporary security group...
+1510166367,,ui,say,==> amazon-ebs: Launching a source AWS instance...
+1510166370,,ui,message,    amazon-ebs: Instance ID: i-07c1c66d7220377f0
+1510166370,,ui,say,==> amazon-ebs: Waiting for instance (i-07c1c66d7220377f0) to become ready...
+1510166393,,ui,say,==> amazon-ebs: Waiting for SSH to become available...
+1510166413,,ui,say,==> amazon-ebs: Connected to SSH!
+1510166413,,ui,say,==> amazon-ebs: Pausing 10s before the next provisioner...
+1510166423,,ui,say,==> amazon-ebs: Provisioning with shell script: scripts/install_software.sh
+1510166426,,ui,message,    amazon-ebs: Loaded plugins: priorities%!(PACKER_COMMA) update-motd%!(PACKER_COMMA) upgrade-helper
+1510166426,,ui,message,    amazon-ebs: No packages marked for update
+1510166426,,ui,message,    amazon-ebs: Loaded plugins: priorities%!(PACKER_COMMA) update-motd%!(PACKER_COMMA) upgrade-helper
+1510166426,,ui,message,    amazon-ebs: Resolving Dependencies
+1510166426,,ui,message,    amazon-ebs: --> Running transaction check
+1510166426,,ui,message,    amazon-ebs: ---> Package docker.x86_64 0:17.06.2ce-1.93.amzn1 will be installed
+1510166426,,ui,message,    amazon-ebs: --> Processing Dependency: xfsprogs for package: docker-17.06.2ce-1.93.amzn1.x86_64
+1510166426,,ui,message,    amazon-ebs: --> Processing Dependency: libseccomp.so.2()(64bit) for package: docker-17.06.2ce-1.93.amzn1.x86_64
+1510166426,,ui,message,    amazon-ebs: --> Processing Dependency: libltdl.so.7()(64bit) for package: docker-17.06.2ce-1.93.amzn1.x86_64
+1510166426,,ui,message,    amazon-ebs: --> Running transaction check
+1510166426,,ui,message,    amazon-ebs: ---> Package libseccomp.x86_64 0:2.3.1-2.4.amzn1 will be installed
+1510166426,,ui,message,    amazon-ebs: ---> Package libtool-ltdl.x86_64 0:2.4.2-20.4.8.5.32.amzn1 will be installed
+1510166426,,ui,message,    amazon-ebs: ---> Package xfsprogs.x86_64 0:4.5.0-9.21.amzn1 will be installed
+1510166427,,ui,message,    amazon-ebs: --> Finished Dependency Resolution
+1510166427,,ui,message,    amazon-ebs:
+1510166427,,ui,message,    amazon-ebs: Dependencies Resolved
+1510166427,,ui,message,    amazon-ebs:
+1510166427,,ui,message,    amazon-ebs: ================================================================================
+1510166427,,ui,message,    amazon-ebs: Package          Arch       Version                     Repository        Size
+1510166427,,ui,message,    amazon-ebs: ================================================================================
+1510166427,,ui,message,    amazon-ebs: Installing:
+1510166427,,ui,message,    amazon-ebs: docker           x86_64     17.06.2ce-1.93.amzn1        amzn-updates      25 M
+1510166427,,ui,message,    amazon-ebs: Installing for dependencies:
+1510166427,,ui,message,    amazon-ebs: libseccomp       x86_64     2.3.1-2.4.amzn1             amzn-main         79 k
+1510166427,,ui,message,    amazon-ebs: libtool-ltdl     x86_64     2.4.2-20.4.8.5.32.amzn1     amzn-main         51 k
+1510166427,,ui,message,    amazon-ebs: xfsprogs         x86_64     4.5.0-9.21.amzn1            amzn-main        1.7 M
+1510166427,,ui,message,    amazon-ebs:
+1510166427,,ui,message,    amazon-ebs: Transaction Summary
+1510166427,,ui,message,    amazon-ebs: ================================================================================
+1510166427,,ui,message,    amazon-ebs: Install  1 Package (+3 Dependent packages)
+1510166427,,ui,message,    amazon-ebs:
+1510166427,,ui,message,    amazon-ebs: Total download size: 27 M
+1510166427,,ui,message,    amazon-ebs: Installed size: 80 M
+1510166427,,ui,message,    amazon-ebs: Downloading packages:
+1510166429,,ui,message,    amazon-ebs: --------------------------------------------------------------------------------
+1510166429,,ui,message,    amazon-ebs: Total                                               13 MB/s |  27 MB  00:02
+1510166429,,ui,message,    amazon-ebs: Running transaction check
+1510166429,,ui,message,    amazon-ebs: Running transaction test
+1510166429,,ui,message,    amazon-ebs: Transaction test succeeded
+1510166429,,ui,message,    amazon-ebs: Running transaction
+1510166429,,ui,message,    amazon-ebs: Installing : libseccomp-2.3.1-2.4.amzn1.x86_64                            1/4
+1510166429,,ui,message,    amazon-ebs: Installing : libtool-ltdl-2.4.2-20.4.8.5.32.amzn1.x86_64                  2/4
+1510166430,,ui,message,    amazon-ebs: Installing : xfsprogs-4.5.0-9.21.amzn1.x86_64                             3/4
+1510166430,,ui,message,    amazon-ebs: Installing : docker-17.06.2ce-1.93.amzn1.x86_64                           4/4
+1510166430,,ui,message,    amazon-ebs: Verifying  : docker-17.06.2ce-1.93.amzn1.x86_64                           1/4
+1510166430,,ui,message,    amazon-ebs: Verifying  : xfsprogs-4.5.0-9.21.amzn1.x86_64                             2/4
+1510166430,,ui,message,    amazon-ebs: Verifying  : libtool-ltdl-2.4.2-20.4.8.5.32.amzn1.x86_64                  3/4
+1510166430,,ui,message,    amazon-ebs: Verifying  : libseccomp-2.3.1-2.4.amzn1.x86_64                            4/4
+1510166430,,ui,message,    amazon-ebs:
+1510166430,,ui,message,    amazon-ebs: Installed:
+1510166430,,ui,message,    amazon-ebs: docker.x86_64 0:17.06.2ce-1.93.amzn1
+1510166430,,ui,message,    amazon-ebs:
+1510166430,,ui,message,    amazon-ebs: Dependency Installed:
+1510166430,,ui,message,    amazon-ebs: libseccomp.x86_64 0:2.3.1-2.4.amzn1
+1510166430,,ui,message,    amazon-ebs: libtool-ltdl.x86_64 0:2.4.2-20.4.8.5.32.amzn1
+1510166430,,ui,message,    amazon-ebs: xfsprogs.x86_64 0:4.5.0-9.21.amzn1
+1510166430,,ui,message,    amazon-ebs:
+1510166430,,ui,message,    amazon-ebs: Complete!
+1510166430,,ui,message,    amazon-ebs: Starting cgconfig service: [  OK  ]
+1510166431,,ui,message,    amazon-ebs: Starting docker:	.[  OK  ]
+1510166431,,ui,message,    amazon-ebs: Containers: 0
+1510166431,,ui,message,    amazon-ebs: Running: 0
+1510166431,,ui,message,    amazon-ebs: Paused: 0
+1510166431,,ui,message,    amazon-ebs: Stopped: 0
+1510166431,,ui,message,    amazon-ebs: Images: 0
+1510166431,,ui,message,    amazon-ebs: Server Version: 17.06.2-ce
+1510166432,,ui,message,    amazon-ebs: Storage Driver: overlay2
+1510166432,,ui,message,    amazon-ebs: Backing Filesystem: extfs
+1510166432,,ui,message,    amazon-ebs: Supports d_type: true
+1510166432,,ui,message,    amazon-ebs: Native Overlay Diff: true
+1510166432,,ui,message,    amazon-ebs: Logging Driver: json-file
+1510166432,,ui,message,    amazon-ebs: Cgroup Driver: cgroupfs
+1510166432,,ui,message,    amazon-ebs: Plugins:
+1510166432,,ui,message,    amazon-ebs: Volume: local
+1510166432,,ui,message,    amazon-ebs: Network: bridge host macvlan null overlay
+1510166432,,ui,message,    amazon-ebs: Log: awslogs fluentd gcplogs gelf journald json-file logentries splunk syslog
+1510166432,,ui,message,    amazon-ebs: Swarm: inactive
+1510166432,,ui,message,    amazon-ebs: Runtimes: runc
+1510166432,,ui,message,    amazon-ebs: Default Runtime: runc
+1510166432,,ui,message,    amazon-ebs: Init Binary: docker-init
+1510166432,,ui,message,    amazon-ebs: containerd version: 6e23458c129b551d5c9871e5174f6b1b7f6d1170
+1510166432,,ui,message,    amazon-ebs: runc version: 810190ceaa507aa2727d7ae6f4790c76ec150bd2
+1510166432,,ui,message,    amazon-ebs: init version: 949e6fa
+1510166432,,ui,message,    amazon-ebs: Security Options:
+1510166432,,ui,message,    amazon-ebs: seccomp
+1510166432,,ui,message,    amazon-ebs: Profile: default
+1510166432,,ui,message,    amazon-ebs: Kernel Version: 4.9.58-18.55.amzn1.x86_64
+1510166432,,ui,message,    amazon-ebs: Operating System: Amazon Linux AMI 2017.09
+1510166432,,ui,message,    amazon-ebs: OSType: linux
+1510166432,,ui,message,    amazon-ebs: Architecture: x86_64
+1510166432,,ui,message,    amazon-ebs: CPUs: 1
+1510166432,,ui,message,    amazon-ebs: Total Memory: 993.4MiB
+1510166432,,ui,message,    amazon-ebs: Name: ip-172-31-83-217
+1510166432,,ui,message,    amazon-ebs: ID: VCRQ:SPXM:ZHLQ:4QTE:4ECI:QVBX:MUBF:LQPU:V4EN:EBAX:TPUF:HWX3
+1510166432,,ui,message,    amazon-ebs: Docker Root Dir: /var/lib/docker
+1510166432,,ui,message,    amazon-ebs: Debug Mode (client): false
+1510166432,,ui,message,    amazon-ebs: Debug Mode (server): false
+1510166432,,ui,message,    amazon-ebs: Registry: https://index.docker.io/v1/
+1510166432,,ui,message,    amazon-ebs: Experimental: false
+1510166432,,ui,message,    amazon-ebs: Insecure Registries:
+1510166432,,ui,message,    amazon-ebs: 127.0.0.0/8
+1510166432,,ui,message,    amazon-ebs: Live Restore Enabled: false
+1510166432,,ui,message,    amazon-ebs:
+1510166432,,ui,message,    amazon-ebs: Client:
+1510166432,,ui,message,    amazon-ebs: Version:      17.06.2-ce
+1510166432,,ui,message,    amazon-ebs: API version:  1.30
+1510166432,,ui,message,    amazon-ebs: Go version:   go1.8.3
+1510166432,,ui,message,    amazon-ebs: Git commit:   3dfb8343b139d6342acfd9975d7f1068b5b1c3d3
+1510166432,,ui,message,    amazon-ebs: Built:        Tue Oct 17 18:33:39 2017
+1510166432,,ui,message,    amazon-ebs: OS/Arch:      linux/amd64
+1510166432,,ui,message,    amazon-ebs:
+1510166432,,ui,message,    amazon-ebs: Server:
+1510166432,,ui,message,    amazon-ebs: Version:      17.06.2-ce
+1510166432,,ui,message,    amazon-ebs: API version:  1.30 (minimum version 1.12)
+1510166432,,ui,message,    amazon-ebs: Go version:   go1.8.3
+1510166432,,ui,message,    amazon-ebs: Git commit:   402dd4a/17.06.2-ce
+1510166432,,ui,message,    amazon-ebs: Built:        Tue Oct 17 18:34:10 2017
+1510166432,,ui,message,    amazon-ebs: OS/Arch:      linux/amd64
+1510166432,,ui,message,    amazon-ebs: Experimental: false
+1510166432,,ui,say,==> amazon-ebs: Uploading mykey => /home/ec2-user/
+1510166434,,ui,say,==> amazon-ebs: Stopping the source instance...
+1510166436,,ui,say,==> amazon-ebs: Waiting for the instance to stop...
+1510166495,,ui,say,==> amazon-ebs: Creating the AMI: packer-example 1510166363
+1510166495,,ui,message,    amazon-ebs: AMI: ami-2077ca5a
+1510166495,,ui,say,==> amazon-ebs: Waiting for AMI to become ready...
+1510166567,,ui,say,==> amazon-ebs: Terminating the source AWS instance...
+1510166575,,ui,say,==> amazon-ebs: Cleaning up any extra volumes...
+1510166576,,ui,say,==> amazon-ebs: No volumes to clean up%!(PACKER_COMMA) skipping
+1510166576,,ui,say,==> amazon-ebs: Deleting temporary security group...
+1510166576,,ui,say,==> amazon-ebs: Deleting temporary keypair...
+1510166577,,ui,say,Build 'amazon-ebs' finished.
+1510166577,,ui,say,\n==> Builds finished. The artifacts of successful builds are:
+1510166577,amazon-ebs,artifact-count,1
+1510166577,amazon-ebs,artifact,0,builder-id,mitchellh.amazonebs
+1510166577,amazon-ebs,artifact,0,id,us-east-1:ami-2077ca5a
+1510166577,amazon-ebs,artifact,0,string,AMIs were created:\n\nus-east-1: ami-2077ca5a
+1510166577,amazon-ebs,artifact,0,files-count,0
+1510166577,amazon-ebs,artifact,0,end
+1510166577,,ui,say,--> amazon-ebs: AMIs were created:\n\nus-east-1: ami-2077ca5a
